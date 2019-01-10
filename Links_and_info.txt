@@ -1,1 +1,27 @@
-1. Python Examples and Challenges by Ardit Sculz
+1. Python Examples and Challenges by Ardit Sculz (This contains the info about the various apps developed by other students) : https://www.udemy.com/the-python-mega-course/learn/v4/announcements?ids=2026186 
+
+2. How to initialize and add a files to the new repo?
+(https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/)
+
+a. git init
+b. git add .
+c. git commit -m "Simple commit msg"
+d. git remote add origin <remote newly create git URL - which has the .git extension>
+e. git push origin master
+
+Now, in the last step, if you get the errors like these :
+
+"! [rejected]        master -> master (fetch first)
+    error: failed to push some refs to '../remote/'
+    hint: Updates were rejected because the remote contains work that you do
+    hint: not have locally. This is usually caused by another repository pushing
+    hint: to the same ref. You may want to first integrate the remote changes
+    hint: (e.g., 'git pull ...') before pushing again.
+    hint: See the 'Note about fast-forwards' in 'git push --help' for details."
+
+Then this article here :- https://blog.plover.com/prog/git-ff-error.html provides a very good explanation.
+
+Solution is : 
+
+"git pull --rebase origin master"
+"git push origin master"
